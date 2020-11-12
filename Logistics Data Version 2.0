@@ -833,7 +833,7 @@ def collect_events(helper, ew):
     
         for order in orders_log5:
             if order[4] > close_shop_time:
-                to_be_delivered_to_clients_tomorrow.append([order[0], order[1], order[2], order[4], starthourinsecondsrecurrent])
+                to_be_delivered_to_clients_tomorrow.append([order[0], order[1], order[2], order[3], starthourinsecondsrecurrent])
     
         mycsv = csv.writer(
             open(os.path.join(app_location, 'yesterdays_leftovers', 'to_be_delivered_to_clients_tomorrow.csv'),'w',newline=''))
